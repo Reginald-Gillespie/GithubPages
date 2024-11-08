@@ -3,35 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News Stats</title>
+    <title>Stats Dashboard</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <!-- Header with Buttons -->
-        <header>
-            <button class="stat-btn" onclick="changeStatImage('stat1')">Stat 1</button>
-            <button class="stat-btn" onclick="changeStatImage('stat2')">Stat 2</button>
-            <button class="stat-btn" onclick="changeStatImage('stat3')">Stat 3</button>
-        </header>
+        <!-- Sidebar for past week images -->
+        <div class="sidebar">
+            <h2>Older</h2>
+            <div class="sidebar-images">
+                <!-- Sidebar images will be loaded dynamically -->
+            </div>
+        </div>
 
-        <!-- Main Content (Stat Image and Sidebar) -->
         <div class="main-content">
-            <div class="stat-display">
-                <img id="statImage" src="stat1.jpg" alt="Current Stat">
+            <!-- Buttons to select stats method -->
+            <div class="button-container">
+                <button onclick="changeImage('frequency')">Frequency</button>
+                <button onclick="changeImage('velocity')">Velocity</button>
             </div>
 
-            <aside class="sidebar">
-                <h3>Past Week's Stats</h3>
-                <div class="past-stats">
-                    <img src="stat-past1.jpg" alt="Past Stat 1">
-                    <img src="stat-past2.jpg" alt="Past Stat 2">
-                    <img src="stat-past3.jpg" alt="Past Stat 3">
-                </div>
-            </aside>
+            <!-- Main Image Display -->
+            <div class="main-image">
+                <img id="main-image" src="Images/latest.png" alt="Stats Image">
+            </div>
         </div>
     </div>
-
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
